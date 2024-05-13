@@ -29,3 +29,7 @@
 * Luồng đi của một request: controller -> Service -> Store đến DB
 
 ## Những dòng trong file application.yml với comment #change là có thể thay đôi
+
+## Để checkout qua nhánh mình làm gõ câu lệnh
+* ví dụ:
+`git checkout TuanAnh`
