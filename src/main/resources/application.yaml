@@ -13,6 +13,19 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      acks: 1
+      retries: 1
+      properties:
+        [enable.idempotence]=true
+        [max.in.flight.request.per.connection]=5
+http:
+  roles:
+    admin: "ADMIN"
+    client: "CLIENT"
 
 jwt:
   signerKey: "1TjXchw5FloESb63Kc+DFhTARvpWL4jUGCwfGWxuG5SIf/1y/LgJxHnMqaF6A/ij"
